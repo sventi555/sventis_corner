@@ -49,13 +49,13 @@ class File(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
-        file_folder = os.path.join(settings.MEDIA_ROOT, 'graphics/{0}/{1}'.format(self.graphic.title, self.type.name))
+        file_folder = os.path.join(settings.MEDIA_ROOT, f'graphics/{self.graphic.title}/{self.type.name}')
         if not os.path.exists(file_folder):
             os.makedirs(file_folder)
 
         if self.graphic.title not in self.file.path:
             current_path = self.file.path
-            self.file.name = os.path.join(file_folder, self.file.name)
+            self.file.name = os.path.join(f'graphics/{self.graphic.title}/{self.type.name}', self.file.name)
             new_path = os.path.join(settings.MEDIA_ROOT, self.file.name)
             os.rename(current_path, new_path)
         super().save(*args, **kwargs)
@@ -76,13 +76,13 @@ class Thumbnail(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
 
-        file_folder = os.path.join(settings.MEDIA_ROOT, 'graphics/{0}/images'.format(self.graphic.title))
+        file_folder = os.path.join(settings.MEDIA_ROOT, f'graphics/{self.graphic.title}/images')
         if not os.path.exists(file_folder):
             os.makedirs(file_folder)
 
         if self.graphic.title not in self.file.path:
             current_path = self.file.path
-            self.file.name = os.path.join('graphics/{0}/images'.format(self.graphic.title), self.file.name)
+            self.file.name = os.path.join(f'graphics/{self.graphic.title}/images', self.file.name)
             new_path = os.path.join(settings.MEDIA_ROOT, self.file.name)
             os.rename(current_path, new_path)
         super().save(*args, **kwargs)
