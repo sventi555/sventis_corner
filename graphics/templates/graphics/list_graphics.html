@@ -3,8 +3,8 @@
 {% block main %}
     <div class="d-flex flex-row flex-wrap justify-content-center">
         {% for graphic in graphics %}
-            <div class="card m-3" style="max-width: 30rem;">
-                <img class="card-img-top" style="width: 20rem; height: 20rem;" src={{ graphic.thumbnail.file.url }} alt="graphic">
+            <div class="card m-3" style="width: 20rem;">
+                <img class="card-img-top" style="width: 100%; height: 20rem;" src={{ graphic.thumbnail.file.url }} alt="graphic">
                 <div class="card-body m-1">
                     <h4 class="card-title">{{ graphic.title }}</h4>
                     <h6 class="card-subtitle text-muted">{{ graphic.date|date:"M d, Y" }}</h6>
