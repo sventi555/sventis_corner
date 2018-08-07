@@ -43,7 +43,7 @@
             <h4 class="display-4 text-muted text-center">{{ graphic.title }}</h4>
             <div id="frame" class="text-center mx-auto" style="width: 90%; height: 70vh;"></div>
             <div class="m-5 p-3" id="description">
-                <p>{{ graphic.description|linebreaks }}</p>
+                <p>{{ graphic.description|safe|linebreaks }}</p>
             </div>
         </div>
     <div>
