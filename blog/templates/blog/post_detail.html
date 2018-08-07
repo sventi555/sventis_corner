@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+  <div class='jumbotron jumbotron-fluid p-5 border border-secondary rounded' style="height: 100vh">
+    <h1 class='display-4 mb-4'>{{ post.title }}</h1>
+    <p class='lead'>{{ post.content|linebreaks }}</p>
+    <p><small class='text-muted'>{{ post.date }}</small></p>
+    <a class='btn btn-secondary float-right' href={% url 'blog:list_posts' %}>Back</a>
+  </div>
+
+
+
+{% endblock main %}
