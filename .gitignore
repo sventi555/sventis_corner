@@ -1,0 +1,9 @@
+# Don't track these folders
+venv/
+.idea/
+keys/
+media/
+
+# Don't track these file types
+__pycache__
+*.sqlite3
