@@ -1,22 +1,9 @@
 {% extends 'layout.html' %}
-{% block style %}
-    <style>
-    .comment-box {
-        border-radius: 10px;
-        padding: 5px;
-    }
-    .comment .text {
-        border-radius: 20px;
-        background-color: rgb(240, 240, 240);
-        padding: 5px 15px;
-    }
-    </style>
-{% endblock style %}
 {% block main %}
     <div id='cards' class="mb-4">
         {% for post in posts %}
-            <div class='card'>
-                <div class='card-header'>z
+            <div class='card mb-1'>
+                <div class='card-header'>
                     <h3>{{ post.title }}</h3>
                 </div>
                 <div class='card-body'>
@@ -25,13 +12,6 @@
                         <footer class='blockquote-footer'><small>{{ post.date }}</small></footer>
                     </blockquote>
                     <a href="{% url 'blog:post_detail' post.pk %}" class='btn btn-primary float-right'>Read More</a>
-                </div>
-                <div class="comment-box">
-                    {% for comment in post.comments.all %}
-                        <div class="comment">
-                            <p class="text">{{ comment.author }}: {{ comment.content }}</p>
-                        </div>
-                    {% endfor %}
                 </div>
             </div>
         {% endfor %}
