@@ -3,6 +3,7 @@ venv/
 .idea/
 keys/
 media/
+.vscode
 
 # Don't track these file types
 __pycache__
