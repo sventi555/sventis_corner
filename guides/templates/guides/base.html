@@ -17,7 +17,13 @@
     <h2><a href="{% url "blog:list_posts" %}">Sventi's Corner</a> - <em>Guides</em></h2>
 </header>
 <main class='container'>
-    <div id="sidebar">Here i am</div>
+    <div id="sidebar">
+        <ul>
+            {% for category in categories %}
+                <li>{{ category.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
     <div id="focus">
         {% block main %}{% endblock main %}
     </div>
