@@ -1,9 +1,13 @@
 from django.db import models
 
+
+class Category(models.Model):
+    name = models.CharField(max_length=250)
+
+
 class Guide(models.Model):
     title = models.CharField(max_length=250)
-    overview = models.TextField()
-    requirements = models.TextField()
-    process = models.TextField()
-    wrapup = models.TextField()
+    content = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+

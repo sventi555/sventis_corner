@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="{% static 'Pingu.png' %}">
+    <link rel="stylesheet" href="{% static 'css/guides/styles.css' %}">
+    <title>{% block title %}Sventi's Corner{% endblock title %}</title>
+
+    {% block head %}{% endblock head %}
+    {% block style %}{% endblock style %}
+</head>
+<body>
+<header>
+    <h2><a href="{% url "blog:list_posts" %}">Sventi's Corner</a> - <em>Guides</em></h2>
+</header>
+<main class='container'>
+    <div id="sidebar">Here i am</div>
+    <div id="focus">
+        {% block main %}{% endblock main %}
+    </div>
+</main>
+<footer>
+
+</footer>
+
+</body>
+</html>
