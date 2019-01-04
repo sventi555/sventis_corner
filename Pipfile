@@ -9,6 +9,7 @@ verify_ssl = true
 Django = "==2.1.5"
 Pillow = "*"
 markdown2 = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"
