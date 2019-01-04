@@ -13,6 +13,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
+    'sventi.com',
+    'www.sventi.com',
 ]
 
 INSTALLED_APPS = [
