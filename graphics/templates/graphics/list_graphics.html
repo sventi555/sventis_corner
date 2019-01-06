@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    {% for graphic in graphics %}
+        <a href="{% url 'graphics:graphic_detail' graphic.title %}">graphic.title</a>
+    {% endfor %}
+{% endblock main %}

@@ -1,0 +1,12 @@
+iframe {
+    width: 80%;
+    height: 80vh;
+    margin: 1em auto;
+    display: block;
+}
+
+#primary {
+    background-color: white;
+    border-radius: 1em;
+    padding: 2em;
+}

@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/graphics/graphic_detail.css' %}">
+{% endblock head %}
+
+{% block main %}
+    <div id="primary">
+        <h1>{{ graphic.title }}</h1>
+        <div>{{ graphic.iframe|safe }}</div>
+        <p>{{ graphic.description }}</p>
+    </div>
+{% endblock main %}
