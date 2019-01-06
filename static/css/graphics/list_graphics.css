@@ -1,0 +1,18 @@
+#graphics a{
+    color: black;
+    text-decoration: none;
+}
+
+.graphic_card {
+    width: 100%;
+    background-color: white;
+    padding: 1em;
+    margin: 0.6em;
+    box-shadow: #252525 0px 5px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.5em;
+}
+
+.graphic_card:hover {
+    transform: scale(1.015);
+}

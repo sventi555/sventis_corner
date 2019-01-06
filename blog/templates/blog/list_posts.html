@@ -8,7 +8,7 @@
                 </div>
                 <div class='card-body'>
                     <blockquote class='blockquote'>
-                        <p class='lead'>{{ post.content|truncatewords:20}}</p>
+                        <p class='lead'>{{ post.content|truncatechars:250}}</p>
                         <footer class='blockquote-footer'><small>{{ post.date }}</small></footer>
                     </blockquote>
                     <a href="{% url 'blog:post_detail' post.pk %}" class='btn btn-primary float-right'>Read More</a>
