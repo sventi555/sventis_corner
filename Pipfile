@@ -6,10 +6,10 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-Django = "==2.1.5"
 Pillow = "*"
 markdown2 = "*"
 gunicorn = "*"
+django = "==2.1.7"
 
 [requires]
 python_version = "3.7"
