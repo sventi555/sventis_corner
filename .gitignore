@@ -1,10 +1,7 @@
 # Don't track these folders
-venv/
-.idea/
 media/
-.vscode
 
 # Don't track these file types
-__pycache__
+__pycache__/
 *.sqlite3
 config.json
