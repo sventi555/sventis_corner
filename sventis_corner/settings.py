@@ -1,15 +1,14 @@
 import os
+import json
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-keys = {}
+with open('./config.json') as f:
+    config = json.load(f)
 
-with open('keys/django', 'r') as django_key_file:
-    keys['django'] = django_key_file.read()
+SECRET_KEY = config.get("SECRET_KEY")
 
-SECRET_KEY = keys['django']
-
-DEBUG = True
+DEBUG = config.get("DEBUG")
 
 ALLOWED_HOSTS = [
     'localhost',
