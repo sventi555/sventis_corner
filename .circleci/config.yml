@@ -33,8 +33,12 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-            echo '{"SECRET_KEY": "slenjrthoi349579gogh349859siufkngq34y598e95adfhq29034yjasdlhfsv","DEBUG": true}' > config.json
 
+      - run:
+          name: setup config file
+          command: |
+             echo '{"SECRET_KEY": "slenjrthoi349579gogh349859siufkngq34y598e95adfhq29034yjasdlhfsv","DEBUG": true}' > config.json
+           
       - save_cache:
           paths:
             - ./venv
