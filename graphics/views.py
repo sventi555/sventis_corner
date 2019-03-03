@@ -1,11 +1,16 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
 from graphics import models
 
 
 def list_graphics(request):
+    graphics_list = models.Graphic.objects.all()
+    paginator = Paginator(graphics_list, 10)
+    page = request.GET.get('page')
+    graphics = paginator.get_page(page)
     return render(request, 'graphics/list_graphics.html',
                   {
-                      'graphics': models.Graphic.objects.all()
+                      'graphics': graphics
                   })
 
 
