@@ -28,8 +28,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            ssh $SSH_USER@$SSH_HOST $SSH_CMD
-
+            ssh $SSH_USER@$SSH_HOST "echo hello"
 workflows:
   version: 2
   build-and-deploy:
