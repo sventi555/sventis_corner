@@ -14,7 +14,7 @@ class Post(models.Model):
 
 
 class TaliaText(models.Model):
-    content = models.TextField()
+    content = models.CharField(max_length=140)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
