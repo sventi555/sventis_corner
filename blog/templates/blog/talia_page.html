@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <div class='jumbotron jumbotron-fluid p-5 border border-secondary rounded'>
+        <h1>Talia's Nonsense</h1>
+        <p>The following are self-proclaimed nicknames that Talia has given herself.</p>
+        <ul>
+            {% for blurb in blurbs %}
+                <li><b>{{ blurb.content }}</b> - <small><em>{{ blurb.date }}</em></small></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+
+{% endblock main %}

@@ -17,3 +17,9 @@ def post_detail(request, pk):
     return render(request, 'blog/post_detail.html', {
         'post': models.Post.objects.get(pk=pk),
     })
+
+
+def talia_page(request):
+    return render(request, 'blog/talia_page.html', {
+        'blurbs': models.TaliaText.objects.all()
+    })

@@ -14,3 +14,11 @@ class PostAdmin(admin.ModelAdmin):
         'title',
         'date',
     )
+
+
+@admin.register(models.TaliaText)
+class TaliaTextAdmin(admin.ModelAdmin):
+    list_display = (
+        'content',
+        'date',
+    )
