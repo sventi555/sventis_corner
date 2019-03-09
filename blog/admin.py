@@ -14,3 +14,5 @@ class PostAdmin(admin.ModelAdmin):
         'title',
         'date',
     )
+
+admin.site.register(models.TaliaText)
