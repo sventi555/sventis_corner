@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block main %}
-  <div class='jumbotron jumbotron-fluid p-5 border border-secondary rounded'>
+  <div class='jumbotron jumbotron-fluid p-4 border border-secondary rounded'>
       <a onclick="window.history.back()" class='btn btn-primary float-right' style='color:white'>&laquo back</a>
       <h1 class='display-4 mb-4'>{{ post.title }}</h1>
       <p class='lead'>{{ post.content|linebreaks }}</p>
